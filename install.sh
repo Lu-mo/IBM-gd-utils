@@ -29,7 +29,8 @@ create_mainfest_file(){
     echo "应用所在区域：${IBM_APP_REGION}"
 
     read -p "请输入机器人token：" BOT_TOKEN
-    while [[ "${#BOT_TOKEN}" <= 0 ]]; do
+    echo "${#BOT_TOKEN}"
+    while [[ "${#BOT_TOKEN}" < 0 ]]; do
     echo "机器人TOKEN输入不正确，请重新输入"
     read -p """请输入机器人token：" BOT_TOKEN
     done
