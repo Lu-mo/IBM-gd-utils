@@ -29,7 +29,7 @@ create_mainfest_file(){
     echo "应用所在区域：${IBM_APP_REGION}"
 
     read -p "请输入机器人token：" BOT_TOKEN
-    while [[ "${#BOT_TOKEN}" != 46 ]]; do
+    while [[ "${#BOT_TOKEN}" <= 0 ]]; do
     echo "机器人TOKEN输入不正确，请重新输入"
     read -p """请输入机器人token：" BOT_TOKEN
     done
@@ -38,7 +38,7 @@ create_mainfest_file(){
     echo "你的TG账号${TG_USERNAME}"
 
     read -p "请输入转存默认目的地团队盘ID：" DRIVE_ID
-    while [[ "${#DRIVE_ID}" != 19 && "${#DRIVE_ID}" != 33 ]]; do
+    while [[ "${#DRIVE_ID}" < 19 ]]; do
     echo "你的Google team drive ID输入不正确"
     read -p "请输入转存默认目的地ID：" DRIVE_ID
     done
