@@ -10,6 +10,9 @@ on:
 #  watch:
 #    types: [started]
 
+workflow_dispatch:
+    inputs:
+    
 jobs:
   ibm-cloud-restart:
     runs-on: ubuntu-latest
